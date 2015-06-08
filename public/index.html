@@ -1,0 +1,473 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <title>Core Lab Interactions :: Lesson 1 </title>
+
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/prettify-custom.css">
+  <link rel="stylesheet" href="/css/lesson-1.css">
+  <link rel="stylesheet" href="/css/lesson-4.css">
+
+  <script src="/js/vendor/modernizr.js"></script>
+</head>
+<body>
+
+  <section id="presentation" class="presentation">
+
+    <article class="slide"><div class="content">
+      <h1 class="title">How to CSS</h1>
+      <h2 class="sub-title">with your host, Nathan Stilwell.</h2>
+    </div></article>
+
+    <article class="slide">
+      <h1 class="title">Selector</h1>
+      <p class="sub-text">specify an element to apply styles to</p>
+      <code class="sub-text">
+        <span class="red">p</span> { color : tomato }
+      </code>
+    </article>
+
+    <article class="slide">
+      <h1 class="title">declaration (or "style")</h1>
+      <p class="sub-text">the thing we want to do to the selected elements, made up of property and value</p>
+      <code class="sub-text">
+        p <span class="red">{ color : tomato }</span>
+      </code>
+    </article>
+
+    <article class="slide">
+      <h1 class="title">Property</h1>
+      <p class="sub-text">the thing I want to change about my elements</p>
+      <code class="sub-text">
+        p {<span class="red">color</span> : tomato }
+      </code>
+    </article>
+
+    <article class="slide">
+      <h1 class="title">Value</h1>
+      <p class="sub-text">What I want to change about my elements</p>
+      <code class="sub-text">
+        p { color : <span class="red">tomato</span>}
+      </code>
+    </article>
+
+    <article class="slide">
+      <h1 class="title">Selectors</h1>
+      <p class="sub-text">targeting your markup</p>
+    </article>
+
+    <article class="slide">
+      <h1 class="title">Type Selector</h1>
+      <p class="sub-text">Use the tag name</p>
+    </article>
+
+    <article class="slide">
+      <pre  class="code"><code>
+          h1 {
+            font-size : 100px;
+            font-weight : bold;
+          }
+
+          p {
+            color : #f0f;
+            padding : 15px
+          }
+
+          ul {
+            color : green;
+          }
+      </code></pre>
+    </article>
+
+    <article class="slide">
+      <h1 class="title">Class Selector</h1>
+      <p class="sub-text">My favorite, stay tuned to find out way</p>
+    </article>
+
+    <article class="slide">
+      <pre class="code"><code>
+&lt;!-- HTML --&gt;
+           &lt;div class="my-div"&gt;blah blah blah &lt;/div&gt;
+
+/* CSS */
+          .my-div {
+            font-size : 100px;
+            font-weight : bold;
+          }
+      </code></pre>
+    </article>
+
+    <article class="slide">
+      <h1 class="title huge">Id selector</h1>
+    </article>
+
+    <article class="slide">
+      <pre class="code"><code>
+&lt;!-- HTML --&gt;
+        &lt;div id="my-div"&gt;blah blah blah &lt;/div&gt;
+
+/* CSS */
+        #my-div {
+            font-size : 100px;
+            font-weight : bold;
+          }
+      </code></pre>
+    </article>
+
+    <article class="slide">
+      <h1 class="title">Descentant Selector</h1>
+      <p class="sub-text">Stuff inside of stuff</p>
+    </article>
+
+    <article class="slide">
+      <pre  class="code"><code>
+&lt;!-- HTML --&gt;
+          &lt;div class="my-div"&gt;
+            &lt;p&gt;
+              some stuff
+            &lt;/p&gt;
+          &lt;/div&gt;
+
+/* CSS */
+          .my-div p{
+            color : purple;
+          }
+      </code></pre>
+    </article>
+
+    <article class="slide">
+      <h1 class="title">Where do we put these styles?</h1>
+      <p class="sub-text"></p>
+    </article>
+
+    <article class="slide">
+      <h1 class="title">inline</h1>
+      <p class="sub-text">the style attr</p>
+      <pre>
+        <p class="code">
+          &lt;div class="some-div" style="color : tomato;"&gt;&lt;/div&gt;
+        </p>
+      </pre>
+    </article>
+
+    <article class="slide">
+      <h1 class="title">The style tag</h1>
+      <p class="sub-text">Put it in your head, please</p>
+      <pre>
+        <p class="code">
+          &lt;style&gt;
+            p { color : tomato; }
+          &lt;/style&gt;
+        </p>
+      </pre>
+    </article>
+
+    <article class="slide">
+      <h1 class="title">In it's own file</h1>
+      <p class="sub-text">Linked style sheets, the link tag. Also, in the head</p>
+      <pre>
+        <p class="code">
+          &lt;link rel="stylesheet" href="css/style.css"&gt;
+        </p>
+      </pre>
+    </article>
+
+
+    <article class="slide">
+      <h1 class="title">Specificity</h1>
+      <p class="sub-text">Now it gets complicated</p>
+    </article>
+
+    <article class="slide">
+      <h1 class="no-space">Who wins?</h1>
+      <pre class="code"><code>
+&lt;!-- HTML --&gt;
+          &lt;div id="thing" class="thing"&gt;
+
+/* CSS */
+          div { color : red; }
+          #thing { color : blue; }
+          .thing { color : green; }
+      </code></pre>
+    </article>
+
+    <article class="slide">
+      <h1 class="title">Let's try</h1>
+      <p class="sub-text">
+        <a href="/lessons/color-test.html" title="Color Test" target="_blank">here</a>
+      </p>
+    </article>
+
+    <article class="slide">
+      <h1 class="title">But why?</h1>
+      <p class="sub-text"><em>
+        <a href="http://specificity.keegan.st" title="Keegan's Specificity Calculator" target="_blank">Specificity</a>
+      </em></p>
+    </article>
+
+    <article class="slide">
+      <h1 class="title">So really,</h1>
+      <p class="sub-text">you can never beat an id. so don't use them.</p>
+    </article>
+
+    <article class="slide">
+      <h1 class="title">What about this?</h1>
+      <p class="sub-text">
+      <pre  class="code"><code>
+...
+
+    .this-thing {
+      color : red;
+    }
+    .this-thing {
+      color : green;
+    }
+    .this-thing {
+      color : blue;
+    }
+
+...
+
+  &lt;p class="this-thing">this thing&lt;/p&gt;
+
+...
+    </code></pre>
+
+        <a href="/lessons/cascade.html" title="this" target="_blank">let's look</a>
+      </p>
+    </article>
+
+    <article class="slide">
+      <h1 class="title">The last thing read, wins</h1>
+      <p>
+        CSS is read top to bottom from the html document, style tags and linked stylesheets, and the last selector read has the highest precedence. Inline styles are the last ones read and so will always override.
+      </p>
+    </article>
+
+
+    <article class="slide">
+      <h1 class="title">The Box Model</h1>
+      <h2>And Friends</h2>
+    </article>
+
+    <article class="slide">
+      <h1 class="title">The Box Model</h1>
+      <p class="sub-text">Everything is a box with 4 basic parts. Margin, Border, Padding, and Content. Look at this.</p>
+    </article>
+
+    <article class="slide">
+      <h1 class="no-space">A Box</h1>
+      <div class="box-example">
+        <div class="box-model-box">
+          Inspect Me
+        </div>
+      </div>
+    </article>
+
+    <article class="slide">
+      <h1 class="title no-space">Shorthand Properties</h1>
+      <p class="sub-text">some properties in css be written in shorthand formats. For instance, <em>margin</em>, is shorthand for <em>margin-top</em>, <em>margin-right</em>, <em>margin-bottom</em>, <em>margin-left</em></p>
+    </article>
+
+    <article class="slide">
+      <pre><p class="code">
+        <span class="comment">/* either */</span>
+        margin-top : 3px;
+        margin-right : 13px;
+        margin-bottom : 17px;
+        margin-left : 7px;
+
+        <span class="comment">/* or    top, left/right, bottom */ </span>
+        padding : 5px 10px 5px;
+
+        <span class="comment">/* or    top/bottom, left/right</span>
+        margin : 10px 20px;
+
+        <span class="comment">/* or  top/bottom/left/right */</span>
+        padding : 15px;
+      </p></pre>
+    </article>
+
+    <article class="slide">
+      <h1 class="title no-space">Margin</h1>
+      <p class="sub-text">The area past the border, fills the space of the parent on block level elements. Can be specified in any <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/length">CSS Length value</a>.</p>
+      <p class="code">
+        margin : 25px 10vw 15px 1em;
+      </p>
+    </article>
+
+
+    <article class="slide">
+      <h1 class="title no-space">Centering</h1>
+      <p class="sub-text">
+        Since margin will fill the parent, we can use <code class="red">auto</code> to make up the different
+        between the width of our box and the width of the parent
+      </p>
+
+      <div class="box-example margin-example">
+        <div class="margin-auto">
+          Centered
+        </div>
+      </div>
+    </article>
+
+
+    <article class="slide">
+      <h1 class="title no-space">Border</h1>
+      <p class="sub-text">
+        <code class="red">border</code> is shorthand for <code class="red">border-width</code>, <code class="red">border-style</code>, and <code class="red">border-color</code>
+      </p>
+      <pre><p class="code">
+        /*      width, style, color */
+        border : 1px solid black;
+      </p></pre>
+    </article>
+
+    <article class="slide">
+      <div class="box-example">
+        <div class="border-example">
+          border
+        </div>
+      </div>
+    </article>
+
+
+
+    <article class="slide">
+      <h1 class="title">Float</h1>
+      <p class="sub-text">How to line stuff up in CSS</p>
+    </article>
+
+    <article class="slide">
+      <h1 class="title">Normal Page Flow</h1>
+      <p class="sub-text">The Browser puts things where it thinks they should go based on their display. <em>Basically</em>, tags fall into two categories : <strong>block</strong> and <strong>inline</strong>.</p>
+    </article>
+
+    <article class="slide">
+      <div class="left">
+        <h2>Some Block Elements</h2>
+        <p>section</p>
+        <p>article</p>
+        <p>div</p>
+        <p>h1, h2, etc</p>
+        <p>header, footer</p>
+        <p>p</p>
+      </div>
+
+      <div class="right">
+        <h2>Some Inline Elements</h2>
+        <p>span</p>
+        <p>a</p>
+        <p>em</p>
+        <p>strong</p>
+        <p>code</p>
+        <p>abbr</p>
+      </div>
+    </article>
+
+    <article class="slide">
+      <h1 class="title">Block</h1>
+      <p class="sub-text">If no width is specified, a block element takes the width of its parent. A block level element will cause a "line break"</p>
+    </article>
+
+    <article class="slide">
+      <h1 class="title">Inline</h1>
+      <p class="sub-text">If no width is specified, an inline element will take the width of it's content. An inline element will not cause a "line break". You're not <em>supposed to</em> put block elements inside of inline elements.</p>
+    </article>
+
+    <article class="slide">
+      <h1 class="title"><a target="_blank" href="lessons/blocks-inlines.html" title="Example">Example</a></h1>
+    </article>
+
+    <article class="slide">
+      <h1 class="title fancy no-space">Floating interrupts page flow</h1>
+      <p class="sub-text">When things are floated, they leave the page flow. And non-floated elements ignore them.</p>
+      <p><a target="_blank" href="lessons/floating.html" title="Example">Example</a></p>
+    </article>
+
+    <article class="slide">
+      <h1 class="title">Clearing the floats</h1>
+      <p class="sub-text">Block level elements that come after floated elements can clear the float from the flow.</p>
+      <p><a target="_blank" href="lessons/float-clearing.html" title="Example">Example</a></p>
+    </article>
+
+    <article class="slide">
+      <h1 class="title">Float Drop!</h1>
+      <p class="sub-text">If the width of the container can't support all the floated elements, the floated element will "drop" down below the previous floated element</p>
+      <p><a target="_blank" href="lessons/float-drop.html" title="Example">Example</a></p>
+    </article>
+
+    <article class="slide">
+      <h1 class="title">Position</h1>
+      <p class="sub-text">If you need finer control of the position of elements you can specify the distance either relative to it's parent, or an absolute value in the window.</p>
+    </article>
+
+    <article class="slide">
+      <h1 class="title no-space fancy">Available Positions</h1>
+      <p class="sub-text">Static (default), Relative, Absolute, Fixed</p>
+    </article>
+
+    <article class="slide">
+      <h1 class="title no-space fancy">Available Offsets</h1>
+      <p class="sub-text">Top, Left, Bottom, and Right</p>
+    </article>
+
+    <article class="slide">
+      <h1 class="title">Static</h1>
+      <p class="sub-text">If no position is specified, an element is considered static and is positioned by page flow. Since these elements are in page flow, specifying an offset doesn't do anything.</p>
+    </article>
+
+    <article class="slide">
+      <h1 class="title">Relative</h1>
+      <p class="sub-text">If an element is position relative, its position is based relative to its static position.</p>
+      <p><a target="_blank" href="lessons/position-relative.html" title="Example">Example</a></p>
+    </article>
+
+    <article class="slide">
+      <h1 class="title">Absolute</h1>
+      <p class="sub-text">If an element is position absolute, its position is based absolutely from its last relative postioned ancestor. If none of it's ancestor has position relative, it will use the window.</p>
+      <p><a target="_blank" href="lessons/position-absolute.html" title="Example">Example</a></p>
+    </article>
+
+    <article class="slide">
+      <h1 class="title">Fixed</h1>
+      <p class="sub-text">If an element is position fixed, its position is based absolutely on the window.</p>
+      <p><a target="_blank" href="lessons/position-fixed.html" title="Example">Example</a></p>
+    </article>
+
+
+    <article class="slide">
+      <h1 class="title"><em>Fin</em></h1>
+      <p class="sub-text">The rest you can learn from <a href="http://css-tricks.com">Chris Coyier</a></p>
+      <p class="sub-text">
+        <img src="/img/cc.jpg" alt="Chris Coyier">
+      </p>
+    </article>
+
+
+
+
+
+
+
+
+  </section><!-- / .presentation -->
+
+  <script src="/js/vendor/jquery.js"></script>
+  <script src="/js/showandtell.js"></script>
+  <script src="/js/vendor/prettify.js"></script>
+  <script>
+  /*global showandtell, prettyPrint  */
+    (function($, global, undefined){
+      'use strict';
+
+      showandtell.init({
+        bigSpace : false
+      });
+      prettyPrint();
+
+    }(this.jQuery, this));
+  </script>
+
+</body>
+</html>

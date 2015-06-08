@@ -1,0 +1,116 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+
+  <!-- Use the .htaccess and remove these lines to avoid edge case issues.
+       More info: h5bp.com/b/378 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>⚓⚓⚓⚓⚓⚓⚓⚓</title>
+  <meta name="description" content="Anchors Away">
+  <meta name="author" content="Nathan Stilwell">
+
+  <!-- Mobile viewport optimized: j.mp/bplateviewport -->
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
+
+  <style type="text/css" media="screen">
+    .stuff {
+      min-height: 70000px;
+    }
+
+    .slide {
+      min-height: 10000px;
+      display: table;
+      font-size: 250px;
+      width: 100%;
+    }
+/*
+    .slide .content {
+      display: table-cell;
+      vertical-align: middle;
+    }*/
+
+    .slide h1 {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+
+    .slide .next {
+      display: block;
+      font-size: 50px;
+      text-align: center;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div id="start" class="stuff" role="main">
+
+
+    <section id="one" class="slide bigspace"><div class="content">
+      <h1>#One</h1>
+      <a class="next" href="#two">Two</a>
+    </div></section><!-- /one -->
+
+    <section id="two" class="slide  bigspace"><div class="content">
+      <h1>#Two</h1>
+      <a class="next" href="#three">Three</a>
+    </div></section><!-- /one -->
+
+
+    <section id="three" class="slide  bigspace"><div class="content">
+      <h1>#Three</h1>
+      <a class="next" href="#four">Four</a>
+    </div></section><!-- /one -->
+
+
+    <section id="four" class="slide bigspace"><div class="content">
+      <h1>#Four</h1>
+      <a class="next" href="#five">Five</a>
+    </div></section><!-- /one -->
+
+
+    <section id="five" class="slide bigspace"><div class="content">
+      <h1>#Five</h1>
+      <a class="next" href="#six">Six</a>
+    </div></section><!-- /one -->
+
+
+
+    <section id="six" class="slide  bigspace"><div class="content">
+      <h1>#Six</h1>
+      <a class="next" href="#seven">Seven</a>
+    </div></section><!-- /one -->
+
+
+    <section id="seven" class="slide bigspace"><div class="content">
+      <h1>#Seven</h1>
+      <a class="next" href="#one">Seven</a>
+    </div></section><!-- /one -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</body>
+</html>
